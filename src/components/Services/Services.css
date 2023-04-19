@@ -1,0 +1,104 @@
+.sevicesCont{
+   
+}
+.sevicesLists{
+    
+    background-color:white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2rem;
+    padding-bottom: 6rem;
+    border-top: 0.5px solid grey;
+}
+@media (max-width: 767px) {
+    .sevicesLists {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .sevicesLists {
+      grid-template-columns: auto;
+    }
+  }
+
+.serviceCard{
+  
+    border-radius: 5px;
+     width: auto;
+    height: 15rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    transition: 0.3s;
+   text-align: center;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+   transform-style: preserve-3d;
+   position: relative;
+}
+@media (max-width: 479px) {
+    .serviceCard {
+      margin-bottom: 3rem;
+      height: 20rem;
+    }
+  }
+
+.sevicesHeader{
+    padding: 48px;
+    display: flex;
+    height: 12rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+}
+.serviceCard:hover {
+    transform: scale(1) rotate(5deg);
+  }
+  .serviceCard:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    transform: translate3d(0, 10px, -20px) rotateX(5deg);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform-origin: center bottom;
+  }
+  .servicesMainHead{
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+    max-width: 800px;
+    font-weight: 700;
+}
+.cardHeader{
+    font-size: 20.32px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.serviceLogo{
+    display: flex;
+    -ms-flex-align: start;
+    margin-bottom: .5rem;
+}
+.servicesMini{
+    font-size: 12.8px;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+}
+.servicesMainHead{
+    display: flex;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-weight: 800;
+}
+  
+  
+  

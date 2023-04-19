@@ -1,0 +1,188 @@
+.header {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.headerSec1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: 3%;
+  margin-top: 7px;
+}
+.headerSec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  height: 8%;
+  z-index: 10;
+  background-color: white;
+}
+
+.header {
+  position: relative;
+  height: 55%;
+}
+
+.navLinksWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.headerSec3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  padding: 20px;
+  width: 74%;
+  top: 0;
+  height: 30px;
+  z-index: 1;
+  color: azure;
+
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.headerSec4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 15%;
+  margin: auto;
+  width: 100%;
+}
+
+@media (max-width: 562px) {
+  .header{
+    overflow-x: hidden;
+  }
+  .headerSec1 {
+    display: none;
+  }
+  .headerSec3 {
+    display: none;
+  }
+  .bannerMain {
+    font-size: 2rem;
+  }
+  .navLink{
+    display: none;
+  }
+
+  .bannerDesc {
+    font-size: 3px;
+    font-weight: 100;
+  }
+  .nav_black{
+    display: none;
+  }
+}
+
+.headerImg {
+  width: 100%;
+  height: 30rem;
+  display: cover;
+  opacity: 0.4;
+}
+.headerSec5 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  color: white;
+  height: 4%;
+}
+.nav_black {
+  background-color: #111;
+}
+
+.navLink {
+  position: relative;
+  padding: 10px 15px;
+}
+
+.navLink:before,
+.navLink:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  bottom: 0;
+  transition: height 0.2s;
+}
+.navLink:before {
+  left: 0;
+  background-color: white;
+}
+.navLink:after {
+  right: 0;
+  background-color: white;
+}
+.navLink:hover:before,
+.navLink:hover:after {
+  height: 100%;
+}
+
+.logoPng {
+  width: 11rem;
+  height: 3.8rem;
+}
+.menu {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.bannerData {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.3rem;
+  color: white;
+}
+
+.bannerMain {
+  display: flex;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+@media (max-width: 562px) {
+  .bannerMain {
+    font-size: 2rem;
+  }
+  .bannerDesc {
+    font-size: 1px;
+    width: 250px;
+    margin: auto;
+    align-items: center;
+    overflow: hidden;
+  }
+}
+
+.bannerDesc {
+  font-size: 22px;
+  font-weight: 300;
+  word-wrap: break-word;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+@media (max-width: 562px) {
+  .bannerMain {
+    font-size: 2;
+    overflow-x: hidden;
+  }
+}
